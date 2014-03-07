@@ -10,7 +10,7 @@ package com.mycompany.Gym;
  *
  * @author student
  */
-public class Account {
+public final class Account {
     private String accountId;
     private String accountHolder;
     private double amountDue;

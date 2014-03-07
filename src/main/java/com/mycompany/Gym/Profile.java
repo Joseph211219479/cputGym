@@ -10,7 +10,7 @@ package com.mycompany.Gym;
  *
  * @author student
  */
-public class Profile {
+public final class Profile {
     
     private String name;
     private String surname;

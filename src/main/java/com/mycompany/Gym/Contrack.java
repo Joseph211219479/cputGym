@@ -12,7 +12,7 @@ import java.util.Date;
  *
  * @author student
  */
-public class Contrack {
+public final class Contrack {
     private String type;
     private String contrackCode;
     private String signUp;
