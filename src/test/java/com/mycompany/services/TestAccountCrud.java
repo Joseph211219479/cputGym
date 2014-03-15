@@ -61,15 +61,8 @@ public class TestAccountCrud {
     }
     @Test
     public void testUpdate() throws Exception {
-        // THIS IS THE WRONG WAY TO DO THIS
-        // PLEASE FIX FIX FIX
-        // LEFT OUT FOR YOU TO FIGURE IT OUT
-
-      //   Account accountTemp = new Account.Builder("1285").accountHolder("Joseph").amountDue(234.55).build();
-
-    //    Account returnAccount = accountobj.merge(accountTemp);
-  //      when(accountobj.merge(accountTemp)).thenReturn(returnAccount);
-//        Mockito.verify(accountobj).merge(returnAccount);
+        
+         
 
     }
 

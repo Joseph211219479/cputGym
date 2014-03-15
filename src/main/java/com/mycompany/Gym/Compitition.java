@@ -69,7 +69,7 @@ public final class Compitition {
             this.date = date;
             return this;
         }
-        Compitition build()
+        public Compitition build()
         {
             return new Compitition(this);
         }

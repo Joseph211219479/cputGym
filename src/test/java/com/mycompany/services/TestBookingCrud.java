@@ -6,8 +6,8 @@
 
 package com.mycompany.services;
 
-import com.mycompany.Gym.Ads;
-import com.mycompany.Services.AdsCrudServ;
+import com.mycompany.Gym.Booking;
+import com.mycompany.Services.BookingCrudServ;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import static org.mockito.Mockito.when;
@@ -23,48 +23,47 @@ import org.testng.annotations.Test;
  *
  * @author student
  */
-public class TestAdsCrud {
+public class TestBookingCrud {
     
-    public TestAdsCrud() {
+    
+    public TestBookingCrud() {
     }
 
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
     //
-     @Mock
-     private static AdsCrudServ adsObj ;
+    // @Test
+    // public void hello() {}
+    
+    @Mock
+     private static BookingCrudServ bobj ;
     
      @BeforeMethod
      public void setUp() throws Exception
      {         
          MockitoAnnotations.initMocks(this);
-        adsObj = Mockito.mock(AdsCrudServ.class);
+        bobj = Mockito.mock(BookingCrudServ.class);
      }
      
      @Test
      public void testCreate() throws Exception
      {
-         Ads ad = new Ads.Build("98645").
-                endDate("23/04/2014").
-                startdate("10/04/2014").
-                build();
+         Booking obj = new Booking.Builder("6483").avail(4).builder();
+                
          
-         Ads returnAds = adsObj.persist(ad);
-        when(adsObj.persist(ad)).thenReturn(returnAds);
-        Mockito.verify(adsObj).persist(ad);
+         Booking returnBook = bobj.persist(obj);
+        when(bobj.persist(obj)).thenReturn(returnBook);
+        Mockito.verify(bobj).persist(obj);
      }
      
      @Test
      public void testRead() throws Exception
      {
-         Ads ad = new Ads.Build("98645").
-                endDate("23/04/2014").
-                startdate("10/04/2014").
-                build();
+         Booking obj = new Booking.Builder("6483").avail(4).builder();
 
-         Ads returnAds = adsObj.find(ad.getId());
-        when(adsObj.persist(ad)).thenReturn(returnAds);
-        Mockito.verify(adsObj).find(ad.getId());
+         Booking returnAds = bobj.find(obj.getBookingId());
+        when(bobj.persist(obj)).thenReturn(returnAds);
+        Mockito.verify(bobj).find(obj.getBookingId());
      }
      
      @Test
@@ -76,17 +75,14 @@ public class TestAdsCrud {
      @Test
     public void testDelete() throws Exception {
 
-         Ads ad = new Ads.Build("98645").
-                endDate("23/04/2014").
-                startdate("10/04/2014").
-                build();
          
-        Ads returnAccount = adsObj.remove(ad);
-        when(adsObj.remove(ad)).thenReturn(returnAccount);
-        Mockito.verify(adsObj).remove(ad);
+         Booking obj = new Booking.Builder("6483").avail(4).builder();
+
+        Booking returnAccount = bobj.remove(obj);
+        when(bobj.remove(obj)).thenReturn(returnAccount);
+        Mockito.verify(bobj).remove(obj);
 
     }
-     
 
     @BeforeClass
     public static void setUpClass() throws Exception {
@@ -98,7 +94,6 @@ public class TestAdsCrud {
 
     @BeforeMethod
     public void setUpMethod() throws Exception {
-        
     }
 
     @AfterMethod
