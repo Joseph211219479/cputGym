@@ -61,7 +61,20 @@ public class TestAccountCrud {
     }
     @Test
     public void testUpdate() throws Exception {
+        Account accountTemp = new Account.
+                 Builder("1285").
+                 accountHolder("Joseph").
+                 amountDue(234.55).
+                 build();
         
+        Account accountUpdate = new Account.
+                 Builder("1285").
+                 amountDue(123.55).
+                 build();
+        
+        accountTemp = accountobj.merge(accountUpdate);
+        when(accountobj.merge(accountUpdate)).thenReturn(accountTemp);
+        Mockito.verify(accountobj).merge(accountUpdate);
          
 
     }

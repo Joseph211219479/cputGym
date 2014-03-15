@@ -69,6 +69,12 @@ public class TestBookingCrud {
      @Test
     public void testUpdate() throws Exception {
        
+         Booking obj = new Booking.Builder("6483").avail(4).builder();
+         Booking update = new Booking.Builder("6483").avail(2).builder();
+         
+         obj = bobj.merge(update);
+         when(bobj.merge(update)).thenReturn(obj);
+         Mockito.verify(bobj).merge(update);
 
     }
     

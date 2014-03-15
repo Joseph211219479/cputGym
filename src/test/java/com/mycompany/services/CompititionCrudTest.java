@@ -67,7 +67,7 @@ public class CompititionCrudTest {
       Compitition objUpdate = new Compitition.Build("687364").name("Classic").build();
       
       obj1 = compserv.merge(objUpdate);
-      when(compserv.merge(objUpdate)).thenReturn(objUpdate);
+      when(compserv.merge(objUpdate)).thenReturn(obj1);
       Mockito.verify(compserv).merge(objUpdate);
 
          

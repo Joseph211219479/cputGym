@@ -69,6 +69,17 @@ public class TestAdsCrud {
      
      @Test
     public void testUpdate() throws Exception {
+        Ads ad = new Ads.Build("98645").
+                endDate("23/04/2014").
+                startdate("10/04/2014").
+                build();
+        Ads update = new Ads.Build("98645").
+                startdate("04/04/2014").
+                build();
+        
+        ad = adsObj.merge(update);
+        when(adsObj.merge(update)).thenReturn(ad);
+        Mockito.verify(adsObj).merge(update);
        
 
     }
