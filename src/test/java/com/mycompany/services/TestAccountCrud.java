@@ -47,10 +47,16 @@ public class TestAccountCrud {
 
     @Test
     public void testRead() throws Exception {
-         Account accountTemp = new Account.Builder("1285").accountHolder("Joseph").amountDue(234.55).build();
-        Account returnAccount = accountobj.find(accountTemp.getAccountId());
+         Account accountTemp = new Account.
+                 Builder("1285").
+                 accountHolder("Joseph").
+                 amountDue(234.55).
+                 build();
+        Account returnAccount = accountobj.
+                                find(accountTemp.getAccountId());
         when(accountobj.find(accountTemp.getAccountId())).thenReturn(returnAccount);
-        Mockito.verify(accountobj).find(accountTemp.getAccountId());
+        Mockito.verify(accountobj).
+                                find(accountTemp.getAccountId());
 
     }
     @Test

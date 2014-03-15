@@ -29,7 +29,7 @@ public class AdsTest {
     @Test
     public void create() 
     {
-        Ads ad = new Ads.Build(98645).
+        Ads ad = new Ads.Build("98645").
                 endDate("23/04/2014").
                 startdate("10/04/2014").
                 build();
@@ -40,7 +40,7 @@ public class AdsTest {
     @Test
     public void update() 
     {
-        Ads ad = new Ads.Build(98645).
+        Ads ad = new Ads.Build("98645").
                 endDate("15/04/2014").
                 startdate("10/04/2014").
                 build();

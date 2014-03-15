@@ -12,7 +12,7 @@ package com.mycompany.Gym;
  */
 public final class Ads {
     
-    private int id;
+    private String id;
     private String startdate;
     private String endDate;
     
@@ -26,11 +26,11 @@ public final class Ads {
     
     public static class Build
     {
-        private int id;
+        private String id;
     private String startdate;
     private String endDate;
     
-        public Build(int id)
+        public Build(String id)
         {
             this.id = id;
         }
@@ -53,7 +53,7 @@ public final class Ads {
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 29 * hash + this.id;
+        hash = 67 * hash + (this.id != null ? this.id.hashCode() : 0);
         return hash;
     }
 
@@ -66,13 +66,15 @@ public final class Ads {
             return false;
         }
         final Ads other = (Ads) obj;
-        if (this.id != other.id) {
+        if ((this.id == null) ? (other.id != null) : !this.id.equals(other.id)) {
             return false;
         }
         return true;
     }
 
-    public int getId() {
+    
+
+    public String getId() {
         return id;
     }
 

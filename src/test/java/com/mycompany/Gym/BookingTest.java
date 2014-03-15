@@ -6,7 +6,8 @@
 
 package com.mycompany.Gym;
 
-import junit.framework.Assert;
+///import junit.framework.Assert;
+import org.testng.Assert;
 import static org.testng.Assert.*;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
