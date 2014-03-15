@@ -63,7 +63,13 @@ public class CompititionCrudTest {
     }
     @Test
     public void testUpdate() throws Exception {
-        
+      Compitition obj1 = new Compitition.Build("687364").date("02/06/2014").name("arnold").prize("glory").build();
+      Compitition objUpdate = new Compitition.Build("687364").name("Classic").build();
+      
+      obj1 = compserv.merge(objUpdate);
+      when(compserv.merge(objUpdate)).thenReturn(objUpdate);
+      Mockito.verify(compserv).merge(objUpdate);
+
          
 
     }
