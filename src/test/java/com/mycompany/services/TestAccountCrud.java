@@ -52,8 +52,7 @@ public class TestAccountCrud {
                  accountHolder("Joseph").
                  amountDue(234.55).
                  build();
-        Account returnAccount = accountobj.
-                                find(accountTemp.getAccountId());
+        Account returnAccount = accountobj.find(accountTemp.getAccountId());
         when(accountobj.find(accountTemp.getAccountId())).thenReturn(returnAccount);
         Mockito.verify(accountobj).
                                 find(accountTemp.getAccountId());
