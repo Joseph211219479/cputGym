@@ -43,7 +43,7 @@ public final class Equipment {
             this.buyDate = buyDate;
             return this;
         }
-        Equipment build()
+        public Equipment build()
         {
             return new Equipment(this);
         }

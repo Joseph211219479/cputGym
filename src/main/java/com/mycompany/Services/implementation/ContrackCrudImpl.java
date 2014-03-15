@@ -6,8 +6,8 @@
 
 package com.mycompany.Services.implementation;
 
-import com.mycompany.Gym.Compitition;
-import com.mycompany.Services.CompititionCrudServ;
+import com.mycompany.Gym.Contrack;
+import com.mycompany.Services.ContrackCrudServ;
 import java.util.List;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -16,31 +16,31 @@ import org.springframework.transaction.annotation.Transactional;
  *
  * @author student
  */
-public class CompititionCrudImpl implements CompititionCrudServ {
-
+public class ContrackCrudImpl implements ContrackCrudServ {
+    
     @Override
     @Transactional (propagation = Propagation.SUPPORTS)
-    public Compitition find(String id) {
+    public Contrack find(String id) {
 return null;    }
 
     @Override
     @Transactional(propagation = Propagation.MANDATORY)
-    public Compitition persist(Compitition entity) {
+    public Contrack persist(Contrack entity) {
 return null;    }
 
     @Override
     @Transactional(propagation = Propagation.REQUIRES_NEW)
-    public Compitition merge(Compitition entity) {
+    public Contrack merge(Contrack entity) {
 return null;    }
 
-     @Override
+    @Override
     @Transactional(propagation = Propagation.REQUIRED)
-    public Compitition remove(Compitition entity) {
+    public Contrack remove(Contrack entity) {
 return null;    }
 
     @Override
     @Transactional(propagation = Propagation.NOT_SUPPORTED)
-    public List<Compitition> findAll() {
+    public List<Contrack> findAll() {
 return null;    }
     
 }

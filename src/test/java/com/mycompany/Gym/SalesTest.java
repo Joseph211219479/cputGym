@@ -30,7 +30,7 @@ public class SalesTest {
      @Test
      public void create() 
      {
-         Invoice in = new Invoice.Build(9865).total(76.50).build();
+         Invoice in = new Invoice.Build("9865").total(76.50).build();
          Assert.assertEquals(9865, in.getId());
          Assert.assertEquals(76.50, in.getTotal());
      }

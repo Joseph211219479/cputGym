@@ -6,8 +6,8 @@
 
 package com.mycompany.Services.implementation;
 
-import com.mycompany.Gym.Compitition;
-import com.mycompany.Services.CompititionCrudServ;
+import com.mycompany.Gym.Contack;
+import com.mycompany.Services.ContackCrudServ;
 import java.util.List;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -16,31 +16,31 @@ import org.springframework.transaction.annotation.Transactional;
  *
  * @author student
  */
-public class CompititionCrudImpl implements CompititionCrudServ {
+public class ContackCrudImpl implements ContackCrudServ {
 
-    @Override
-    @Transactional (propagation = Propagation.SUPPORTS)
-    public Compitition find(String id) {
-return null;    }
-
-    @Override
-    @Transactional(propagation = Propagation.MANDATORY)
-    public Compitition persist(Compitition entity) {
-return null;    }
-
-    @Override
-    @Transactional(propagation = Propagation.REQUIRES_NEW)
-    public Compitition merge(Compitition entity) {
+     @Transactional (propagation = Propagation.SUPPORTS)
+    public Contack find(String id) {
 return null;    }
 
      @Override
+    @Transactional(propagation = Propagation.MANDATORY)
+    public Contack persist(Contack entity) {
+return null;     }
+
+    
+    @Override
+    @Transactional(propagation = Propagation.REQUIRES_NEW)
+    public Contack merge(Contack entity) {
+return null;     }
+
+    @Override
     @Transactional(propagation = Propagation.REQUIRED)
-    public Compitition remove(Compitition entity) {
-return null;    }
+    public Contack remove(Contack entity) {
+return null;     }
 
     @Override
     @Transactional(propagation = Propagation.NOT_SUPPORTED)
-    public List<Compitition> findAll() {
-return null;    }
+    public List<Contack> findAll() {
+return null;     }
     
 }

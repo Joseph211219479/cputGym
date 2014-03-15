@@ -6,8 +6,7 @@
 
 package com.mycompany.Services.implementation;
 
-import com.mycompany.Gym.Compitition;
-import com.mycompany.Services.CompititionCrudServ;
+import com.mycompany.Services.EquipmentCrudServ;
 import java.util.List;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -16,31 +15,31 @@ import org.springframework.transaction.annotation.Transactional;
  *
  * @author student
  */
-public class CompititionCrudImpl implements CompititionCrudServ {
+public class EquipmentCrudImpl implements EquipmentCrudServ {
 
-    @Override
-    @Transactional (propagation = Propagation.SUPPORTS)
-    public Compitition find(String id) {
+     @Override
+    @Transactional(propagation = Propagation.SUPPORTS)
+    public Object find(Object id) {
 return null;    }
 
     @Override
     @Transactional(propagation = Propagation.MANDATORY)
-    public Compitition persist(Compitition entity) {
-return null;    }
-
-    @Override
-    @Transactional(propagation = Propagation.REQUIRES_NEW)
-    public Compitition merge(Compitition entity) {
+    public Object persist(Object entity) {
 return null;    }
 
      @Override
+    @Transactional (propagation = Propagation.REQUIRES_NEW)
+    public Object merge(Object entity) {
+return null;    }
+
+    @Override
     @Transactional(propagation = Propagation.REQUIRED)
-    public Compitition remove(Compitition entity) {
+    public Object remove(Object entity) {
 return null;    }
 
     @Override
     @Transactional(propagation = Propagation.NOT_SUPPORTED)
-    public List<Compitition> findAll() {
+    public List findAll() {
 return null;    }
     
 }

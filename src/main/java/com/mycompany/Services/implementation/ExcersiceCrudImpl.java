@@ -6,8 +6,8 @@
 
 package com.mycompany.Services.implementation;
 
-import com.mycompany.Gym.Compitition;
-import com.mycompany.Services.CompititionCrudServ;
+import com.mycompany.Gym.Excercise;
+import com.mycompany.Services.ExcersiceCrudServ;
 import java.util.List;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -16,31 +16,31 @@ import org.springframework.transaction.annotation.Transactional;
  *
  * @author student
  */
-public class CompititionCrudImpl implements CompititionCrudServ {
+public class ExcersiceCrudImpl implements ExcersiceCrudServ{
 
-    @Override
+     @Override
     @Transactional (propagation = Propagation.SUPPORTS)
-    public Compitition find(String id) {
-return null;    }
-
-    @Override
-    @Transactional(propagation = Propagation.MANDATORY)
-    public Compitition persist(Compitition entity) {
-return null;    }
-
-    @Override
-    @Transactional(propagation = Propagation.REQUIRES_NEW)
-    public Compitition merge(Compitition entity) {
+    public Excercise find(String id) {
 return null;    }
 
      @Override
-    @Transactional(propagation = Propagation.REQUIRED)
-    public Compitition remove(Compitition entity) {
+    @Transactional(propagation = Propagation.MANDATORY)
+    public Excercise persist(Excercise entity) {
+return null;    }
+
+     @Override
+    @Transactional(propagation = Propagation.REQUIRES_NEW)
+    public Excercise merge(Excercise entity) {
 return null;    }
 
     @Override
+    @Transactional(propagation = Propagation.REQUIRED)
+        public Excercise remove(Excercise entity) {
+return null;    }
+
+   @Override
     @Transactional(propagation = Propagation.NOT_SUPPORTED)
-    public List<Compitition> findAll() {
+    public List<Excercise> findAll() {
 return null;    }
     
 }

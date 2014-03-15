@@ -15,7 +15,7 @@ import java.util.List;
 public final class Invoice {
     private double total;
     private List<Product> product;
-    private int id;
+    private String id;
     
     private Invoice(){}
     private Invoice(Build build)
@@ -33,7 +33,7 @@ public final class Invoice {
         return product;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
     
@@ -41,9 +41,9 @@ public final class Invoice {
     {
         private double total;
         private List<Product> product;
-        private int id;
+        private String id;
         
-        public Build(int id)
+        public Build(String id)
         {
             this.id = id;
         }
@@ -66,8 +66,8 @@ public final class Invoice {
 
     @Override
     public int hashCode() {
-        int hash = 5;
-        hash = 41 * hash + this.id;
+        int hash = 7;
+        hash = 67 * hash + (this.id != null ? this.id.hashCode() : 0);
         return hash;
     }
 
@@ -80,11 +80,13 @@ public final class Invoice {
             return false;
         }
         final Invoice other = (Invoice) obj;
-        if (this.id != other.id) {
+        if ((this.id == null) ? (other.id != null) : !this.id.equals(other.id)) {
             return false;
         }
         return true;
     }
+
+    
     
     
     
